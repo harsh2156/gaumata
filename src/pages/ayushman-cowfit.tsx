@@ -1,4 +1,15 @@
 import Video from "../assets/ayushman-cowfit-page-video.mp4"
+import {
+  HeartIcon,
+  ClockIcon,
+  TagIcon,
+  FireIcon,
+  UserIcon,
+  BoltIcon,
+  ChatBubbleBottomCenterTextIcon,
+  SunIcon,
+  ShieldCheckIcon,
+} from "@heroicons/react/24/outline"
 
 export default function AyushmanCowfit() {
   return (
@@ -6,9 +17,11 @@ export default function AyushmanCowfit() {
       {/* Hero Section */}
       <div className="relative">
         <div className="flex flex-col md:flex-row">
-          <div className="bg-green-50 p-8 md:p-16 md:w-1/2">
-            <h1 className="text-4xl font-bold mb-2">Ayushman Cowfit</h1>
-            <p className="text-green-600">Cattle Health Monitoring IoT Solution</p>
+          <div className="bg-green-50 p-6 sm:p-8 md:p-16 md:w-1/2">
+            <h1 className="text-3xl sm:text-4xl font-bold mb-2">Ayushman Cowfit</h1>
+            <p className="text-green-600 text-base sm:text-lg">
+              Cattle Health Monitoring IoT Solution
+            </p>
           </div>
           <div className="md:w-1/2">
             <img
@@ -22,12 +35,12 @@ export default function AyushmanCowfit() {
 
       {/* Introduction Section */}
       <div className="container mx-auto px-4 py-8">
-        <div className="space-y-4">
+        <div className="space-y-4 text-justify">
           <p>
-            Ayushman Cowfit revolutionizes cattle care with an AI-powered, collar-based IoT solution. Tailored for
-            comprehensive herd management, our system monitors vital aspects like heat cycle, activity, rumination,
-            temperature, and behavior in real-time. Accessible via Dashboard/Mobile App, it prioritizes cattle
-            well-being, enhancing productivity.
+            Ayushman Cowfit revolutionizes cattle care with an AI-powered, collar-based IoT solution.
+            Tailored for comprehensive herd management, our system monitors vital aspects like heat cycle,
+            activity, rumination, temperature, and behavior in real-time. Accessible via Dashboard/Mobile App,
+            it prioritizes cattle well-being, enhancing productivity.
           </p>
           <p>
             Using BLE technology, data seamlessly travels from sensors to gateways, transmitted via telecom towers to
@@ -41,8 +54,8 @@ export default function AyushmanCowfit() {
       {/* Why Ayushman Cowfit Section */}
       <div className="bg-green-50 py-12">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8">Why Ayushman Cowfit?</h2>
-          <div className="space-y-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8">Why Ayushman Cowfit?</h2>
+          <div className="space-y-4 text-justify text-sm sm:text-base">
             <p>
               India boasts a substantial livestock population of approximately 305 million, representing 37.28% of the
               global total. Despite this, the contribution to GDP from milk production, a vital agricultural commodity,
@@ -73,7 +86,7 @@ export default function AyushmanCowfit() {
 
       {/* Our Solution Section */}
       <div className="container mx-auto px-4 py-12">
-        <h2 className="text-3xl font-bold text-center mb-8">Our Solution</h2>
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8">Our Solution</h2>
         <div className="flex justify-center mb-12">
           <img
             src="/cow-diagram.png"
@@ -82,44 +95,32 @@ export default function AyushmanCowfit() {
           />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Care First Approach Card */}
           <div className="border p-6 rounded-lg text-center">
             <div className="flex justify-center mb-4">
-              <img
-                src="/icons/care-first.png"
-                alt="Care First"
-                className="h-12 w-12"
-              />
+              <HeartIcon className="h-12 w-12 text-green-600" />
             </div>
             <h3 className="font-medium">Care First Approach</h3>
           </div>
+          {/* Real Time Insights Card */}
           <div className="border p-6 rounded-lg text-center">
             <div className="flex justify-center mb-4">
-              <img
-                src="/icons/real-time.png"
-                alt="Real Time"
-                className="h-12 w-12"
-              />
+              <ClockIcon className="h-12 w-12 text-green-600" />
             </div>
             <h3 className="font-medium">Real Time Insights</h3>
           </div>
+          {/* Affordable Card */}
           <div className="border p-6 rounded-lg text-center">
             <div className="flex justify-center mb-4">
-              <img
-                src="/icons/affordable.png"
-                alt="Affordable"
-                className="h-12 w-12"
-              />
+              <TagIcon className="h-12 w-12 text-green-600" />
             </div>
             <h3 className="font-medium">Affordable</h3>
           </div>
+          {/* Upto 10X ROI Card */}
           <div className="border p-6 rounded-lg text-center">
             <div className="flex justify-center mb-4">
-              <img
-                src="/icons/roi.png"
-                alt="ROI"
-                className="h-12 w-12"
-              />
+              {/* <TrendingUpIcon className="h-12 w-12 text-green-600" /> */}
             </div>
             <h3 className="font-medium">Upto 10X ROI</h3>
           </div>
@@ -133,76 +134,57 @@ export default function AyushmanCowfit() {
           style={{ backgroundImage: 'url("/farm-background.jpg")' }}
         ></div>
         <div className="relative z-10 container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-black">Ayushman Cowfit Features</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-black">
+            Ayushman Cowfit Features
+          </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Heat Detection Card */}
             <div className="bg-green-600 p-6 rounded-lg text-center text-white">
               <div className="flex justify-center mb-4">
-                <img
-                  src="/icons/heat.png"
-                  alt="Heat Detection"
-                  className="h-12 w-12"
-                />
+                <FireIcon className="h-12 w-12" />
               </div>
               <h3 className="font-medium">Heat Detection</h3>
             </div>
+            {/* Posture Alerts Card */}
             <div className="bg-green-600 p-6 rounded-lg text-center text-white">
               <div className="flex justify-center mb-4">
-                <img
-                  src="/icons/posture.png"
-                  alt="Posture Alerts"
-                  className="h-12 w-12"
-                />
+                <UserIcon className="h-12 w-12" />
               </div>
               <h3 className="font-medium">Posture Alerts</h3>
             </div>
+            {/* Activity Alerts Card */}
             <div className="bg-green-600 p-6 rounded-lg text-center text-white">
               <div className="flex justify-center mb-4">
-                <img
-                  src="/icons/activity.png"
-                  alt="Activity Alerts"
-                  className="h-12 w-12"
-                />
+                <BoltIcon className="h-12 w-12" />
               </div>
               <h3 className="font-medium">Activity Alerts</h3>
             </div>
+            {/* Rumination Alerts Card */}
             <div className="bg-green-600 p-6 rounded-lg text-center text-white">
               <div className="flex justify-center mb-4">
-                <img
-                  src="/icons/rumination.png"
-                  alt="Rumination Alerts"
-                  className="h-12 w-12"
-                />
+                <ChatBubbleBottomCenterTextIcon className="h-12 w-12" />
               </div>
               <h3 className="font-medium">Rumination Alerts</h3>
             </div>
+            {/* Health Alerts Card */}
             <div className="bg-green-600 p-6 rounded-lg text-center text-white">
               <div className="flex justify-center mb-4">
-                <img
-                  src="/icons/health.png"
-                  alt="Health Alerts"
-                  className="h-12 w-12"
-                />
+                <HeartIcon className="h-12 w-12" />
               </div>
               <h3 className="font-medium">Health Alerts</h3>
             </div>
+            {/* Temperature Alerts Card */}
             <div className="bg-green-600 p-6 rounded-lg text-center text-white">
               <div className="flex justify-center mb-4">
-                <img
-                  src="/icons/temperature.png"
-                  alt="Temperature Alerts"
-                  className="h-12 w-12"
-                />
+                <SunIcon className="h-12 w-12" />
               </div>
               <h3 className="font-medium">Temperature Alerts</h3>
             </div>
-            <div className="bg-green-600 p-6 rounded-lg text-center text-white md:col-start-2">
+            {/* Vaccination Alerts Card */}
+            <div className="bg-green-600 p-6 rounded-lg text-center text-white sm:col-span-2 lg:col-span-1">
               <div className="flex justify-center mb-4">
-                <img
-                  src="/icons/vaccination.png"
-                  alt="Vaccination Alerts"
-                  className="h-12 w-12"
-                />
+                <ShieldCheckIcon className="h-12 w-12" />
               </div>
               <h3 className="font-medium">Vaccination Alerts</h3>
             </div>
@@ -212,10 +194,9 @@ export default function AyushmanCowfit() {
 
       {/* How It Works Section */}
       <div className="container mx-auto px-4 py-12">
-        <h2 className="text-3xl font-bold text-center mb-8">How Does It Work?</h2>
-
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8">How Does It Work?</h2>
         <div className="flex justify-center mb-8">
-          <div className="max-w-sm rounded-lg shadow-lg overflow-hidden">
+          <div className="max-w-sm w-full rounded-lg shadow-lg overflow-hidden">
             <video
               className="w-full h-auto"
               autoPlay
@@ -228,13 +209,11 @@ export default function AyushmanCowfit() {
             </video>
           </div>
         </div>
-
-        <p className="mb-6">
+        <p className="mb-6 text-justify text-sm sm:text-base">
           Ayushman Cowfit utilizes BLE technology for seamless communication and data transfer within cattle health
           and reproduction monitoring systems.
         </p>
-
-        <ul className="space-y-6">
+        <ul className="space-y-6 text-sm sm:text-base">
           <li className="flex">
             <div className="mr-2">•</div>
             <div>
@@ -249,7 +228,9 @@ export default function AyushmanCowfit() {
             <div className="mr-2">•</div>
             <div>
               <strong>Sensor Data Collection</strong>
-              <p>These sensors gather data on activity levels, rumination, and other health metrics.</p>
+              <p>
+                These sensors gather data on activity levels, rumination, and other health metrics.
+              </p>
             </div>
           </li>
           <li className="flex">
@@ -257,8 +238,7 @@ export default function AyushmanCowfit() {
             <div>
               <strong>Wireless Communication</strong>
               <p>
-                BLE enables wireless communication between sensor devices and a gateway device on the farm for data
-                collection.
+                BLE enables wireless communication between sensor devices and a gateway device on the farm for data collection.
               </p>
             </div>
           </li>
@@ -266,21 +246,27 @@ export default function AyushmanCowfit() {
             <div className="mr-2">•</div>
             <div>
               <strong>Data Transmission</strong>
-              <p>Health and reproductive data are transmitted via BLE to a secure cloud-based platform.</p>
+              <p>
+                Health and reproductive data are transmitted via BLE to a secure cloud-based platform.
+              </p>
             </div>
           </li>
           <li className="flex">
             <div className="mr-2">•</div>
             <div>
               <strong>Cloud-Based Storage and Processing</strong>
-              <p>Data is securely stored and processed in the cloud for advanced analytics.</p>
+              <p>
+                Data is securely stored and processed in the cloud for advanced analytics.
+              </p>
             </div>
           </li>
           <li className="flex">
             <div className="mr-2">•</div>
             <div>
               <strong>Real-Time Monitoring and Analytics</strong>
-              <p>The system generates alerts for abnormal patterns, enabling timely intervention.</p>
+              <p>
+                The system generates alerts for abnormal patterns, enabling timely intervention.
+              </p>
             </div>
           </li>
           <li className="flex">
@@ -288,14 +274,12 @@ export default function AyushmanCowfit() {
             <div>
               <strong>User Interaction and Control</strong>
               <p>
-                Farmers can interact with the system, view historical data, and make informed decisions for herd
-                management.
+                Farmers can interact with the system, view historical data, and make informed decisions for herd management.
               </p>
             </div>
           </li>
         </ul>
-
-        <p className="mt-6">
+        <p className="mt-6 text-justify text-sm sm:text-base">
           Ayushman Cowfit offers an efficient, wireless solution for collecting, transmitting, and analyzing data,
           empowering farmers to make informed decisions for their livestock's health and well-being.
         </p>
